@@ -9,18 +9,18 @@ public class FirstName {
      *
      * @param Firstname is used for comparing with regex
      */
-    public void isFirstName(String Firstname) {
-        Pattern pattern = Pattern.compile("^[A-Z][a-z]{2,}$");
+    public boolean isFirstName(String Firstname) {
+        Pattern pattern = Pattern.compile("^[A-Z][a-z]{2,}");
         Matcher matcher = pattern.matcher(Firstname);
         if (matcher.matches()) {
-            System.out.println("The entered name is valid");
+            return true;
         } else
-            System.out.println("The entered name is invalid");
+            return false;
     }
 
     public static void main(String[] args) {
         FirstName obj = new FirstName();
         obj.isFirstName("MadHuKar");
-        obj.isFirstName("Madhukar");
+        obj.isFirstName("madhukar");
     }
 }
