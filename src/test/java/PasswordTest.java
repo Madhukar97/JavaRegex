@@ -7,6 +7,6 @@ public class PasswordTest {
 
     @Test
     public void password() {
-        Assert.assertTrue(obj.password("^&^%$#$jdnHkj"));
+        Assert.assertTrue(obj.password("^&^%$#$jdnHkj8"));
     }
 }
