@@ -10,7 +10,7 @@ public class Password {
      */
     public boolean password(String passcode) {
 
-        Pattern pattern = Pattern.compile("^[a-zA-Z0-9 !@#$%^&*(){}'.,+-_]{8,}");
+        Pattern pattern = Pattern.compile("^(?=.*[A-Z])[a-zA-Z0-9 !@#$%^&*(){}'.,+-_]{8,}");  //
         Matcher matcher = pattern.matcher(passcode);
         return matcher.matches();
     }
@@ -18,6 +18,6 @@ public class Password {
     public static void main(String[] args) {
 
         Password obj = new Password();
-        System.out.println(obj.password("madhukar@97"));
+        System.out.println(obj.password("Madhukar@97"));
     }
 }
