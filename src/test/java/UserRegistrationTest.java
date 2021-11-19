@@ -1,9 +1,9 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class PasswordTest {
+public class UserRegistrationTest {
 
-    Password obj = new Password();
+    UserRegistration obj = new UserRegistration();
 
     @Test
     public void happyFirstName() {
@@ -37,11 +37,11 @@ public class PasswordTest {
 
     @Test
     public void happyPassword() {
-        Assert.assertTrue(obj.password("^&^%$#$jdnHkj8"));
+        Assert.assertTrue(obj.isPassword("^&^%$#$jdnHkj8"));
     }
 
     @Test
     public void sadPassword() {
-        Assert.assertFalse(obj.password("^&^%$#$jdnkj8"));
+        Assert.assertFalse(obj.isPassword("^&^%$#$jdnkj8"));
     }
 }
